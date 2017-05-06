@@ -16,7 +16,7 @@ import { TagRipple } from '../tag';
 
 // angular universal hacks
 /* tslint:disable-next-line */
-const KeyboardEvent = (global as any).KeyboardEvent;
+const KeyboardEvent = <any>{};
 
 // mocking navigator
 const navigator = typeof window !== 'undefined' ? window.navigator : {

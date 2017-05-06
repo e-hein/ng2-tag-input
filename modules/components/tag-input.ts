@@ -33,7 +33,7 @@ import 'rxjs/add/operator/map';
 
 // angular universal hacks
 /* tslint:disable-next-line */
-const DragEvent = (global as any).DragEvent;
+const DragEvent = <any>{};
 
 const CUSTOM_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
