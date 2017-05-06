@@ -4,10 +4,10 @@
      (click)="focus(true, false)"
      [attr.tabindex]="-1"
 
-     (drop)="dragZone ? onTagDropped($event, undefined) : undefined"
+     (drop)="dragZone ? onTagDropped($event) : undefined"
      (dragenter)="dragZone ? onDragOver($event) : undefined"
      (dragover)="dragZone ? onDragOver($event) : undefined"
-     (dragleave)="dragZone ? onDragEnd(undefined) : undefined"
+     (dragleave)="dragZone ? onDragEnd() : undefined"
 
      [class.ng2-tag-input--dropping]="isDropping"
      [class.ng2-tag-input--disabled]="disabled"

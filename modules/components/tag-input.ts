@@ -455,7 +455,7 @@ export class TagInputComponent extends TagInputAccessor implements OnInit {
      * @param isFromAutocomplete
      * @param tag
      */
-    public onAddingRequested(isFromAutocomplete: boolean, tag: TagModel): void {
+    public onAddingRequested(isFromAutocomplete?: boolean, tag?: TagModel): void {
         if (this.onAdding) {
             this.onAdding(tag)
                 .subscribe((model: TagModel) => {
@@ -838,7 +838,7 @@ export class TagInputComponent extends TagInputAccessor implements OnInit {
      * @param event
      * @param index
      */
-    public onTagDropped(event: DragEvent, index: number): void {
+    public onTagDropped(event: DragEvent, index?: number): void {
         this.onDragEnd();
 
         const data = event.dataTransfer.getData(constants.DRAG_AND_DROP_KEY);
