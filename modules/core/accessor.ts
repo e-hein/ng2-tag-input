@@ -73,6 +73,6 @@ export class TagInputAccessor implements ControlValueAccessor {
      * @return {TagModel[]}
      */
     protected getItemsWithout(index: number): TagModel[] {
-        return this.items.filter((item, position) => position !== index);
+        return this.items.filter((_item, position) => position !== index);
     }
 }
